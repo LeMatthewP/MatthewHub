@@ -1,0 +1,36 @@
+body {
+    background-color: black; 
+    color: rgb(255, 255, 255);
+    font-family: "Arial", "Helvetica", sans-sarif!important;
+}
+
+.navgroso {
+    background-color: #0e0e0e;;
+    padding: 10px 0; 
+    width:100%; 
+}
+
+.menupaginas{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.hub {
+    margin-top: 50px;
+    display: block;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hub span:nth-child(2) {
+    background: #FF9900;
+    color: #000000;
+    border-radius: 1vw;
+    padding: 0 1vw 1vw 1vw;
+    display: inline-block;
+  }
+

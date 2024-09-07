@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" /> 
+    <title>Mi Perfil</title>
+</head>
+<body>
+{% include "menu.html" %}
+<center>
+{% block contenido %}
+<div class="parent">
+<form class="form" action="{% url 'guardararticuloP' %}" method="POST">
+    {% csrf_token %}
+    
+    <div class="item"><label  for="title">Titulo</label>
+    <input type="text" name="title"/></div>
+    <div class="item">
+    <label class="item" for="content">Contenido</label>
+    <input type="textarea" name="content"></textarea></div>
+    <div class="item">
+    <label class="item" for="publicado">Publicado</label>
+    <select name="publicado">
+        <option value="1">SI</option>
+        <option value="0">NO</option>
+    </select>
+</div>
+
+    <input type="submit" value="Guardar">
+
+</form>
+{% endblock %}
+</center>
+</body>
+</html>

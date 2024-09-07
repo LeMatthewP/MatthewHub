@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" /> 
+    <title>PaginaWeb</title>
+</head>
+<body>
+    {% include "menu.html" %}
+<center>
+    {% comment %} esta es una herramienta que servira para mas tarde {% endcomment %}
+    {% comment %} <iframe src="https://www.pornhub.com/embed/6660abb4bdde5" frameborder="0" width="560" height="315" scrolling="no" allowfullscreen></iframe> {% endcomment %}
+    {% for articulo in articulos %}
+        <div>
+            
+            <h1>{{ articulo.titulo }}</h1>
+            <p>{{ articulo.contenido }}</p>
+        </div>
+    {% endfor %}
+</center>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{%load static%}
+
+<nav class="navgroso">
+    <ul class="menupaginas">
+        <div class="hub">
+            <span contenteditable="false">Matthew</span>
+            <span contenteditable="false">Hub</span>
+            
+          </div>
+        <li><a href="{% url 'index' %}">Pagina Principal</a></li>
+        {% if not user.is_authenticated %}
+        <li><a href="{% url 'register' %}">Register</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+        {% endif %}
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'nuevopost' %}">Nuevo Post</a></li>
+        <li><a href="{% url 'usuario' %}">Usuario</a></li>
+        <a href="{% url 'logout' %}">Cerrar sesión</a>
+        {% endif %}
+
+    </ul>
+</nav>
